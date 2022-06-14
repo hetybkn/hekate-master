@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Hekate.Tests.fs" />
+    <EmbeddedResource Include="**\*.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.*" />
+    <PackageReference Include="xunit" Version="2.3.*" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.*" />
+    <PackageReference Include="Unquote" Version="4.*" />
+    <PackageReference Include="FsCheck.Xunit" Version="3.0.0-*" />
+    <PackageReference Include="FsCheck" Version="3.0.0-*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Hekate\Hekate.fsproj" />
+  </ItemGroup>
+
+</Project>
